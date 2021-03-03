@@ -1,24 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 name: Deploy-Treinazap PRD - S3
-
 on:
-  release:
-    types: [commit]
+  push:
+    branches:
+    - master
 
 jobs:
   build:
