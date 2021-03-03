@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name: Deploy-Treinazap PRD - S3
+
+on:
+  release:
+    types: [commit]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: ls -la
+      - run: pwd
+
+
+
+
+
+
+
+
+
+
+
