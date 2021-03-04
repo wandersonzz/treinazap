@@ -17,9 +17,9 @@ jobs:
         env:
             CI: "false"
       - name: Deploy s3
-        run: cd build && AWS_ACCESS_KEY_ID=AKIA3CMWG6YO3UOFFWEN 
-                          AWS_SECRET_ACCESS_KEY=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  
-                              aws s3 sync . s3://treinazap --acl public-read --delete
+        run: cd build && AWS_ACCESS_KEY_ID=AKIA3CMWG6YOTAFUY3VN 
+                          AWS_SECRET_ACCESS_KEY=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  
+                              aws s3 sync . s3://wanderson-zap --acl public-read --delete
         
         
         
