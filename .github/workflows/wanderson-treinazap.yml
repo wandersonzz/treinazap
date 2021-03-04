@@ -12,5 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: ls -la
-      - run: pwd
+      - name: INSTALL E BUILD
+        run: npm install && npm run build 
+      - name: LISTAR ARQUIVO
+        run: ls -la build/*
