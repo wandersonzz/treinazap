@@ -1,4 +1,4 @@
-name: Wand Deploy-Treinazap PRD - S3
+name: Wand Deploy-Treinazap PRD
 on:
   push:
     branches:
