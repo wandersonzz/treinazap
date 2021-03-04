@@ -1,8 +1,6 @@
 name: Deploy-TREINAZAP S3
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
 
 jobs:
   build:
