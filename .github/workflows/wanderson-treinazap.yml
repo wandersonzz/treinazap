@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: dopplerhq/cli-action@v1
+      - name: set envs agent github actions
+        run: doppler secrets download --no-file --format=docler >> $GITHUB_ENV;
+        env:
+            DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN_PRD }}
+                
+                
       - uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -17,8 +24,9 @@ jobs:
         env:
             CI: "false"
       - name: Deploy s3
-        run: cd build && AWS_ACCESS_KEY_ID=${CHAVE} AWS_SECRET_ACCESS_KEY=${SENHA}  
+        run: cd build && AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY}  
                               aws s3 sync . s3://wanderson-zap --acl public-read --delete
-        env:         
-            CHAVE: ${{ secrets.ACCESS_KEY }}        
-            SENHA: ${{ secrets.SECRET_KEY }}
+
+
+
+
