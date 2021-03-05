@@ -14,7 +14,7 @@ jobs:
             DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN_PRD }}
         
       - name: Print nome
-        run: ECHO $NOME
+        run: echo $NOME
       - uses: actions/setup-node@v1
         with:
           node-version: 12
